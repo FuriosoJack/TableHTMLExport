@@ -1,5 +1,5 @@
 # Cache objects
 packer_cache/
-
+.idea/
 # For built boxes
 *.box
