@@ -32,14 +32,12 @@ THE SOFTWARE.*/
                 newline: '\r\n',
                 ignoreColumns: [],
                 ignoreRows: [],
-                tableName:'yourTableName',
                 type:'csv',
-                pdfFontSize:14,
-                pdfLeftMargin:20,
-                htmlContent:'false',
-                consoleLog:'false',
+                htmlContent: false,
+                consoleLog: false,
                 trimContent: true,
-                quoteFields: true
+                quoteFields: true,
+                filename: 'tableHTMLExport.csv'
             };
             var options = $.extend(defaults, options);
 
@@ -51,7 +49,7 @@ THE SOFTWARE.*/
 
             function parseString(data){
 
-                if(defaults.htmlContent == 'true'){
+                if(defaults.htmlContent){
                     content_data = data.html().trim();
                 }else{
                     content_data = data.text().trim();
@@ -72,6 +70,11 @@ THE SOFTWARE.*/
                 document.body.removeChild(element);
             }
 
+            /**
+             * Convierte la tabla enviada a json
+             * @param el
+             * @returns {{header: *, data: Array}}
+             */
             function toJson(el){
 
                 var jsonHeaderArray = [];
@@ -107,6 +110,11 @@ THE SOFTWARE.*/
             }
 
 
+            /**
+             * Convierte la tabla enviada a csv o texto
+             * @param table
+             * @returns {string}
+             */
             function toCsv(table){
                 var output = "";
 
@@ -135,9 +143,6 @@ THE SOFTWARE.*/
             }
 
 
-
-
-
             var el = this;
             var dataMe;
             if(options.type == 'csv' || options.type == 'txt'){
@@ -155,6 +160,10 @@ THE SOFTWARE.*/
 
                 dataMe = toCsv(table);
 
+                if(defaults.consoleLog){
+                    console.log(dataMe);
+                }
+
                 download(options.filename,dataMe);
 
 
@@ -164,7 +173,7 @@ THE SOFTWARE.*/
 
                 var jsonExportArray = toJson(el);
 
-                if(defaults.consoleLog == 'true'){
+                if(defaults.consoleLog){
                     console.log(JSON.stringify(jsonExportArray));
                 }
                 dataMe = JSON.stringify(jsonExportArray);
@@ -176,6 +185,11 @@ THE SOFTWARE.*/
             }else if(options.type == 'pdf'){
 
                 var jsonExportArray = toJson(el);
+
+                if(defaults.consoleLog){
+                    console.log(jsonExportArray);
+                }
+
                 var doc = new jsPDF('p', 'pt');
                 doc.autoTable(jsonExportArray.header, jsonExportArray.data);
                 doc.save(options.filename);
