@@ -106,6 +106,8 @@ Resultado:
 
 ## Exportar a PDF | Export To PDF
 
+[Ejemplo Funcional](https://codepen.io/furiosojack/pen/gBxmvQ?editors=1111) 
+
 Para exportar a PDF es requerido la libreria [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable)
 
 ```javascript
