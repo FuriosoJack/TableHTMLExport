@@ -61,7 +61,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 
 ## Exportar a JSON | Export To JSON
 
-[Ejemplo Funcional](https://codepen.io/furiosojack/pen/JmyExX?editors=1111){:target="_blank"}
+[Ejemplo Funcional](https://codepen.io/furiosojack/pen/JmyExX?editors=1111)
 
 ```javascript
 $("#tableCompany").tableHTMLExport({type:'json',filename:'tablaLicencias.json',ignoreColumns:'.acciones,#primero',ignoreRows: '#ultimo'});
@@ -105,10 +105,9 @@ Resultado:
 ```
 
 ## Exportar a PDF | Export To PDF
+[Ejemplo Funcional](https://codepen.io/furiosojack/pen/gBxmvQ?editors=1111) 
 
-[Ejemplo Funcional](https://codepen.io/furiosojack/pen/gBxmvQ?editors=1111){:target="_blank"}
-
-Para exportar a PDF es requerido la libreria [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable){:target="_blank"}
+Para exportar a PDF es requerido la libreria [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable)
 
 ```javascript
 $("#tableCompany").tableHTMLExport({type:'pdf',filename:'tablaLicencias.pdf',ignoreColumns:'.acciones,#primero',ignoreRows: '#ultimo'});
