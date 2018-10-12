@@ -81,7 +81,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 
 ## Exportar a JSON | Export To JSON
 
-[Ejemplo Funcional | Functional Examplo](https://codepen.io/furiosojack/pen/JmyExX?editors=1111)
+[Ejemplo Funcional | Functional Example](https://codepen.io/furiosojack/pen/JmyExX?editors=1111)
 
 ```javascript
 $("#tableCompany").tableHTMLExport({type:'json',filename:'tablaLicencias.json',ignoreColumns:'.acciones,#primero',ignoreRows: '#ultimo'});
