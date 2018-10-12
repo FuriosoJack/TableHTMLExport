@@ -115,7 +115,7 @@ $("#tableCompany").tableHTMLExport({type:'pdf',filename:'tablaLicencias.pdf',ign
 Resultado: 
 ![alt text][exporPDF]
 
-[exporPDF]: https://ibb.co/hhRor9 "Como ser ve la exportacion PDF"
+[exporPDF]: https://image.ibb.co/kZvgB9/Captura.png "Como ser ve la exportacion PDF"
 
 
 
