@@ -1,5 +1,5 @@
 # TableHTMLExport V1.0.0
-Plugin de *Jquery* que exporta una tabla HTML a JSON, CSV, TXT, o PDF y forzar al navegador a darcargar el archivo generado.
+Plugin de *Jquery* que exporta una tabla HTML a JSON, CSV, TXT, o PDF y forzar al navegador a descargar el archivo generado.
 
 *Jquery* plugin that exports an HTML table to JSON, CSV, TXT, or PDF and force the browser to download the generated file.
 
