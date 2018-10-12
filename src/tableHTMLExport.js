@@ -30,8 +30,8 @@ THE SOFTWARE.*/
             var defaults = {
                 separator: ',',
                 newline: '\r\n',
-                ignoreColumns: [],
-                ignoreRows: [],
+                ignoreColumns: '',
+                ignoreRows: '',
                 type:'csv',
                 htmlContent: false,
                 consoleLog: false,
