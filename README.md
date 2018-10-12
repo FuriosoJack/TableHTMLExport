@@ -1,13 +1,18 @@
-# TableHTMLExport
+# TableHTMLExport V1.0.0
 Plugin de *Jquery* que exporta una tabla HTML a JSON, CSV, TXT, o PDF y forzar al navegador a darcargar el archivo generado.
 
 Jquery *plugin* that exports an HTML table to JSON, CSV, TXT, or PDF.
 
-## Instalacion | Install CDN
+## Instalacion | Install
 
 Puede descargar el archivo *tableHTMLExport.js* que esta en la carpeta *src* de este repositorioo o utilizar el CDN
 
 You can download the *tableHTMLExport.js* file that is in the *src* folder of this repository or use the CDN
+
+### CDN
+```html
+<script src="https://gitcdn.xyz/repo/FuriosoJack/TableHTMLExport/v1.0.0/src/tableHTMLExport.js"></script>
+```
 
 ## Opciones | Options
 
