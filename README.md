@@ -1,8 +1,10 @@
 # TableHTMLExport V1.0.0
 Plugin de *Jquery* que exporta una tabla HTML a JSON, CSV, TXT, o PDF y forzar al navegador a darcargar el archivo generado.
 
-Jquery *plugin* that exports an HTML table to JSON, CSV, TXT, or PDF.
+*Jquery* plugin that exports an HTML table to JSON, CSV, TXT, or PDF and force the browser to download the generated file.
 
+## Requsitos | Requirements
+ - [Jquery](https://jquery.com/)  
 ## Instalacion | Install
 
 Puede descargar el archivo *tableHTMLExport.js* que esta en la carpeta *src* de este repositorioo o utilizar el CDN
@@ -14,7 +16,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 <script src="https://gitcdn.xyz/repo/FuriosoJack/TableHTMLExport/v1.0.0/src/tableHTMLExport.js"></script>
 ```
 
-## Opciones | Options
+## Opciones 
 
 - type: Opcion(string) para especificar el tipo de exportacion (csv,txt,json,pdf)
 - separator: Opcion(string) que sera util solo cuando se exportar a *csv* en donde se especifica el caracter que servira como separador entre columnas *default: ,*
@@ -26,7 +28,20 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 - trimContent: Opcion(bool) que sera util solo cuando se exporta a *csv* y la cual recorta el contenido de las etiquetas individuales *\<th>*, *\<td>*  de los espacios en blanco. Esto producirá una salida válida incluso si la tabla está sangrada *default: true*
 - quoteFields Opcion(bool) que sera util solo cuando se exporta a *csv* y la cual cita campos *default: true*.
 - filename: Opcion(string) nombre con el que el archivo se va a guardar *default: tableHTMLExport.csv*
-# Ejemplo
+
+## Options
+- type: Option (string) to specify the type of export (csv, txt, json, pdf)
+- separator: Option (string) that will be useful only when exporting to *csv* where the character that will serve as separator between columns is specified *default: ,*
+- newline: Option (string) that will be useful only when exporting to *csv* where the characters are specified for a new line *default: \r\n*
+- ignoreColumns: Option (string) to specify the with the css selectors of the columns that will be ignored *default: ''*
+- ignoreRows: Option (string) to specify the css selectors of the columns to be ignored *default:''*
+- htmlContent: Option (bool) to indicate if the content of the table to be exported has HTML code *default:false*
+- consoleLog: Option (bool) to indicate if you want to see the logs of the export process *default: false*
+- trimContent: Option (bool) that will be useful only when exported to * csv * and which trims the contents of the individual tags *\<th>*, *\<td>* of the blanks. This will produce a valid output even if the table is indented. *default: true*
+- quoteFields Option (bool) that will be useful only when exported to * csv * and which cites fields *default: true*.
+- filename: Option (string) name with which the file is to be saved *default: tableHTMLExport.csv*
+
+# Ejemplos | Examples
 
 
 ```html
@@ -66,7 +81,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 
 ## Exportar a JSON | Export To JSON
 
-[Ejemplo Funcional](https://codepen.io/furiosojack/pen/JmyExX?editors=1111)
+[Ejemplo Funcional | Functional Examplo](https://codepen.io/furiosojack/pen/JmyExX?editors=1111)
 
 ```javascript
 $("#tableCompany").tableHTMLExport({type:'json',filename:'tablaLicencias.json',ignoreColumns:'.acciones,#primero',ignoreRows: '#ultimo'});
@@ -110,15 +125,16 @@ Resultado:
 ```
 
 ## Exportar a PDF | Export To PDF
-[Ejemplo Funcional](https://codepen.io/furiosojack/pen/gBxmvQ?editors=1111) 
+[Ejemplo Funcional | Functional Example ](https://codepen.io/furiosojack/pen/gBxmvQ?editors=1111) 
 
 Para exportar a PDF es requerido la libreria [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable)
+To export to PDF the library is required [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable)
 
 ```javascript
 $("#tableCompany").tableHTMLExport({type:'pdf',filename:'tablaLicencias.pdf',ignoreColumns:'.acciones,#primero',ignoreRows: '#ultimo'});
 ```
 
-Resultado: 
+Resultado | Result:  
 ![alt text][exporPDF]
 
 [exporPDF]: https://image.ibb.co/kZvgB9/Captura.png "Como ser ve la exportacion PDF"
