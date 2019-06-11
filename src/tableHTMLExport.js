@@ -37,7 +37,8 @@ THE SOFTWARE.*/
                 consoleLog: false,
                 trimContent: true,
                 quoteFields: true,
-                filename: 'tableHTMLExport.csv'
+                filename: 'tableHTMLExport.csv',
+                utf8BOM: true
             };
             var options = $.extend(defaults, options);
 
@@ -117,6 +118,10 @@ THE SOFTWARE.*/
              */
             function toCsv(table){
                 var output = "";
+                
+                if (options.utf8BOM === true) {                
+                    output += '\ufeff';
+                }
 
                 var rows = table.find('tr').not(options.ignoreRows);
 
