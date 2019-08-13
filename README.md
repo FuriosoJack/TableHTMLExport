@@ -13,7 +13,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 
 ### CDN
 ```html
-<script src="https://gitcdn.xyz/repo/FuriosoJack/TableHTMLExport/v1.0.0/src/tableHTMLExport.js"></script>
+<script src="https://gitcdn.xyz/repo/FuriosoJack/TableHTMLExport/v1.0.1/src/tableHTMLExport.js"></script>
 ```
 
 ## Opciones 
