@@ -191,12 +191,17 @@ THE SOFTWARE.*/
 
                 var jsonExportArray = toJson(el);
 
+                var contentJsPdf = {
+                    head: jsonExportArray.header,
+                    body: jsonExportArray.data
+                };
+
                 if(defaults.consoleLog){
-                    console.log(jsonExportArray);
+                    console.log(contentJsPdf);
                 }
 
                 var doc = new jsPDF('p', 'pt');
-                doc.autoTable({head: jsonExportArray.header, body : jsonExportArray.data});
+                doc.autoTable(contentJsPdf);
                 doc.save(options.filename);
 
             }
