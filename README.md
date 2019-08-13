@@ -1,10 +1,14 @@
-# TableHTMLExport V1.0.1
+# TableHTMLExport V2.0.1
 Plugin de *Jquery* que exporta una tabla HTML a JSON, CSV, TXT, o PDF y forzar al navegador a descargar el archivo generado.
 
 *Jquery* plugin that exports an HTML table to JSON, CSV, TXT, or PDF and force the browser to download the generated file.
 
 ## Requsitos | Requirements
  - [Jquery](https://jquery.com/)  
+ - Si se desea exportar a PDF es necesario tener las libreria jsPDF y el plugin Autotable | 
+If you want to export to PDF it is necessary to have the jsPDF libraries and the Autotable plugin [jsPDF](https://github.com/simonbengtsson/jsPDF-AutoTable)  
+ 
+ 
 ## Instalacion | Install
 
 Puede descargar el archivo *tableHTMLExport.js* que esta en la carpeta *src* de este repositorioo o utilizar el CDN
@@ -13,7 +17,7 @@ You can download the *tableHTMLExport.js* file that is in the *src* folder of th
 
 ### CDN
 ```html
-<script src="https://gitcdn.xyz/repo/FuriosoJack/TableHTMLExport/v1.0.1/src/tableHTMLExport.js"></script>
+<script src="https://rawcdn.githack.com/FuriosoJack/TableHTMLExport/v2.0.0/src/tableHTMLExport.js"></script>
 ```
 
 ## Opciones 
