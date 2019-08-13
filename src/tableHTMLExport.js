@@ -192,7 +192,7 @@ THE SOFTWARE.*/
                 var jsonExportArray = toJson(el);
 
                 var contentJsPdf = {
-                    head: jsonExportArray.header,
+                    head: [jsonExportArray.header],
                     body: jsonExportArray.data
                 };
 
