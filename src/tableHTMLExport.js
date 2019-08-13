@@ -196,7 +196,7 @@ THE SOFTWARE.*/
                 }
 
                 var doc = new jsPDF('p', 'pt');
-                doc.autoTable(jsonExportArray.header, jsonExportArray.data);
+                doc.autoTable({head: jsonExportArray.header, body : jsonExportArray.data});
                 doc.save(options.filename);
 
             }
